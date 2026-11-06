@@ -83,6 +83,11 @@ The tool only uses the Python standard library. Tests: `python -m unittest disco
 | `smarttube` | [github.com/yuliskov/SmartTube](https://github.com/yuliskov/SmartTube) (stable, armeabi-v7a) | YouTube with your Google account, background audio. See [SmartTube_Setup.md](../SmartTube_Setup.md) |
 | `newpipe` | [github.com/TeamNewPipe/NewPipe](https://github.com/TeamNewPipe/NewPipe) | YouTube music with background play and local playlists, no login |
 | `vlc` | [get.videolan.org](https://get.videolan.org/vlc-android/last/) (SHA-256 checked) | Music/video from a USB stick, internet radio stream links |
+| `headunit` | [Open Headunit](https://github.com/andreknieriem/headunit-revived) (free, open source) | Android Auto from your phone over a USB cable: Waze, Maps, Spotify, YouTube Music |
+| `radiodroid` | [F-Droid](https://f-droid.org/packages/net.programmierecke.radiodroid2/) | Internet radio, thousands of stations |
+| `vinyl` | [F-Droid](https://f-droid.org/packages/com.poupa.vinylmusicplayer/) | Simple offline music player |
+
+NewPipe 0.29 and newer need Android 6, so the script falls back to **0.28.8**, the last version for Android 5. It will stop getting fixes, so it may break when YouTube changes.
 
 Put `x50_get_apps.py` and `x50_apk_prep.py` in the same folder, unzip the Custom App Script next to them, then run:
 

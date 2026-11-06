@@ -56,6 +56,22 @@ class GetAppsTest(unittest.TestCase):
         self.assertEqual(rc, 1)
         self.assertIn("SHA-256 mismatch", out)
 
+    def test_fdroid_newest_compatible(self):
+        new = Path("r2.apk"); make_apk(new, package="net.programmierecke.radiodroid2", min_sdk=24)
+        old = Path("r1.apk"); make_apk(old, package="net.programmierecke.radiodroid2", min_sdk=16)
+        pkg = "net.programmierecke.radiodroid2"
+        self.files[f"https://f-droid.org/api/v1/packages/{pkg}"] = json.dumps(
+            {"packages": [{"versionName": "0.86", "versionCode": 86}, {"versionName": "0.90", "versionCode": 90}]}).encode()
+        self.files[f"https://f-droid.org/repo/{pkg}_90.apk"] = new.read_bytes()
+        self.files[f"https://f-droid.org/repo/{pkg}_86.apk"] = old.read_bytes()
+        rc, out = self.run_main("--out", "app", "radiodroid")
+        self.assertEqual(rc, 0, out)
+        self.assertIn("0.86", out)
+        self.assertTrue(Path(f"app/hutroops.{pkg}/{pkg}.apk").exists())
+
+    def test_any_apk_prefers_release(self):
+        self.assertEqual(g.pick_any_apk(["app-debug.apk", "app-release.apk", "notes.txt"]), "app-release.apk")
+
     def test_smarttube_asset_choice(self):
         names = ["SmartTube_beta_31.0_armeabi-v7a.apk", "SmartTube_stable_30.56_arm64-v8a.apk",
                  "SmartTube_stable_30.56_armeabi-v7a.apk", "SmartTube_stable_30.56_x86.apk"]
