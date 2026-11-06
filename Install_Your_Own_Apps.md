@@ -1,5 +1,5 @@
 # Before you start
-- This guide meant for advance user.
+- This guide is meant for advanced users.
 - You do not need to run standard script beforehand, you can just install your APK with this script. 
 - Some apps might not works on IHU, please test on your own. I can't tell why it's not working...
 - Strictly follow the steps. In case you break your IHU (although almost impossible if you adhere to the guide), I can't fix for you. :)
@@ -15,13 +15,25 @@
 - [Custom App Script](https://drive.google.com/file/d/1EpvxZOyXnMC-YOJfu41RYuFS_HK6idGg/view?usp=sharing)
 
 
+# Quick way: let the prep tool do steps 4 to 12
+
+The [X50 APK prep tool](tools/README.md) checks each APK (Android version, split APK, ARM libraries), then creates the `hutroops.<package>` folders and the `lib/arm` / `lib/arm64` folders for you:
+
+```
+python x50_apk_prep.py info .
+python x50_apk_prep.py prepare . --out "Custom App/install/app"
+python x50_apk_prep.py check-usb E:\
+```
+
+You still need to download the APKs (steps 1 to 3) and unzip the Custom App script (step 5). The manual steps below do the same thing by hand.
+
 # Prepare your list of apps
 1. Search your app in trusted source. For eg: [APKPure](https://m.apkpure.com/).
 2. Scroll to "Additional Information", make sure "Required Android" is less or equal to Android 5.0+ (Lollipop).  
 
 ![image](https://user-images.githubusercontent.com/17538895/223180936-b6607edf-aa41-4772-ad62-490c2769a96d.png)
 
-3. Download APK. Make sure it's a single .apk file and NOT Split / App Bundle3.
+3. Download APK. Make sure it's a single .apk file and NOT a split APK / App Bundle (XAPK, APKS, APKM).
 4. Once downloaded, you can check the details by drag and drop .apk file to APK-Info. Take note the Min / Max SDK should be Lollipop or lower.
 
 ![image](https://user-images.githubusercontent.com/17538895/223182905-1ddd6a67-56cc-4386-9987-81ccf0602842.png)
@@ -64,7 +76,9 @@
 
 12. Repeat Step 6 - 11 for all downloaded APK file.
 13. Now you have prepared your USB! Place content inside "install" folder in FAT32 formatted USB and plug to USB. Rest of steps are the same as standard installation.
-14. If you want to reuse the USB after executing files, rename folder "b832bc61472727635baffcf25dd28e9f239273e2_done" to "b832bc61472727635baffcf25dd28e9f239273e2". 
+14. If you want to reuse the USB after executing files, rename folder "b832bc61472727635baffcf25dd28e9f239273e2_done" to "b832bc61472727635baffcf25dd28e9f239273e2", or run `python x50_apk_prep.py reset-usb <USB drive>`.
+
+If an app does not install, see [Troubleshooting](Troubleshooting.md#a-custom-app-does-not-install-or-crashes--自己的-app-无法安装或闪退).
 
 # Uninstall app custom app
 
