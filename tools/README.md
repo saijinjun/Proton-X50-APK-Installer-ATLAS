@@ -73,3 +73,23 @@ python x50_apk_prep.py reset-usb E:\
 ## For developers
 
 The tool only uses the Python standard library. Tests: `python -m unittest discover tools`.
+
+## Get music & video apps automatically
+
+`x50_get_apps.py` downloads apps that work without Google Play Services from their **official sources only**, picks the newest release that still runs on Android 5.1 (it tries older releases if the newest needs a newer Android), and lays them out with `x50_apk_prep.py`.
+
+| App | Source | Good for |
+|---|---|---|
+| `smarttube` | [github.com/yuliskov/SmartTube](https://github.com/yuliskov/SmartTube) (stable, armeabi-v7a) | YouTube with your Google account, background audio. See [SmartTube_Setup.md](../SmartTube_Setup.md) |
+| `newpipe` | [github.com/TeamNewPipe/NewPipe](https://github.com/TeamNewPipe/NewPipe) | YouTube music with background play and local playlists, no login |
+| `vlc` | [get.videolan.org](https://get.videolan.org/vlc-android/last/) (SHA-256 checked) | Music/video from a USB stick, internet radio stream links |
+
+Put `x50_get_apps.py` and `x50_apk_prep.py` in the same folder, unzip the Custom App Script next to them, then run:
+
+```
+python x50_get_apps.py --out "Custom App/install/app"
+```
+
+Or pick apps: `python x50_get_apps.py --out "Custom App/install/app" smarttube vlc`. Then copy the content of `Custom App/install` to the FAT32 USB and run `python x50_apk_prep.py check-usb E:\`.
+
+**Spotify, YouTube Music, Apple Music:** current versions need a newer Android than the IHU, and old APKs often can't sign in any more. Play them from your phone through Android Auto / CarPlay or Bluetooth instead.
