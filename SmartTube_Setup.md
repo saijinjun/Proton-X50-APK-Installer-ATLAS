@@ -1,10 +1,16 @@
 # SmartTube Setup: Google Login & Best Settings / SmartTube 设置：Google 登录与推荐设置
 
-The X50 IHU runs Android 5, so the **Google Play Store and the official YouTube app cannot be installed**. Google Play Services no longer supports Android 5 and needs root/system access, and the current YouTube app needs Android 8 or newer.
-X50 IHU 是 Android 5，所以**无法安装 Google Play Store 和官方 YouTube App**（Google Play Services 已不支持 Android 5，而且需要 Root / System 权限，最新 YouTube 需要 Android 8 以上）。
+The X50 IHU runs Android 5, so the **Google Play Store and the official YouTube app cannot be installed**. Google Play Services no longer supports Android 5 and needs root/system access, and the current YouTube app needs Android 10 or newer for updates.
+X50 IHU 是 Android 5，所以**无法安装 Google Play Store 和官方 YouTube App**（Google Play Services 已不支持 Android 5，而且需要 Root / System 权限，最新 YouTube 需要 Android 10 以上）。
 
 **SmartTube** is the best replacement. It works without Google Play Services and **lets you log in to your own Google account** to get your subscriptions, history and playlists, with no ads.
 **SmartTube** 是最好的替代方案：不需要 Google Play Services，**可以登录自己的 Google 账号**（订阅、观看记录、播放列表都在），而且没有广告。
+
+> 🔒 **Security note:** In November 2025 SmartTube's signing key was exposed and some official builds were infected with malware. Versions **before 30.56** must be uninstalled; they will not update to the safe build. Only use APKs from the official source, https://github.com/yuliskov/SmartTube, and check the version before you put it in an installer.
+> 🔒 **安全提醒：** 2025 年 11 月 SmartTube 的签名密钥外泄，部分官方版本被植入恶意软件。**30.56 之前**的版本必须删除（不会自动更新到安全版本）。只从官方 https://github.com/yuliskov/SmartTube 下载，放进 Installer 前先确认版本。
+
+> 🖐️ **Touch note:** SmartTube is designed for a TV remote and officially does not support touch. On the X50 most screens work by tapping, but some menus may be hard to use. A small USB/Bluetooth air-mouse remote or keyboard can help (untested on the X50).
+> 🖐️ **触控提醒：** SmartTube 是为电视遥控器设计的，官方不支持触控。在 X50 上大部分画面可以直接点，但有些菜单可能不好操作。可以试试 USB / Bluetooth 飞鼠遥控器或键盘（未在 X50 测试）。
 
 > ⚠️ For safety, only watch videos while parked. Use audio-only / background play while driving.
 > ⚠️ 为了安全，只在停车时看视频。开车时请使用纯音频 / 后台播放。
