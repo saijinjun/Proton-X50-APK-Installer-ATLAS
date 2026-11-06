@@ -116,6 +116,8 @@ After installation, please go to:
 Remember to **BLOCK SmartTube notification**.  
 记得把 **SmartTube Notification Block 掉**。
 
+👉 **Login with Google account & recommended settings / Google 账号登录与推荐设置：** [SmartTube_Setup.md](SmartTube_Setup.md)
+
 Done.  
 完成。
 
@@ -284,6 +286,8 @@ If the script helps you, feel free to support me at Ko-Fi. https://ko-fi.com/xeo
 A script installing a set of apps that is currently working only in Proton X50 IHU running on ATLAS version 617 / 618. For GKUI, see [here](https://github.com/xeon1989/Proton-X50-APK-Installer-GKUI).
 
 To customize your own set of apps, [see here.](https://github.com/xeon1989/Proton-X50-APK-Installer-ATLAS/blob/main/Install_Your_Own_Apps.md)
+
+To log in to YouTube with your Google account and set up SmartTube for the X50, [see here.](SmartTube_Setup.md)
 
 Following apps are included.
 
