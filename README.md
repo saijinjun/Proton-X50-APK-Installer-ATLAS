@@ -1,4 +1,24 @@
-# Notices:
+# Proton X50 APK Installer (ATLAS)
+
+Scripts that install extra apps (Android Auto, CarPlay, Waze, Spotify, NewPipe, SmartTube and more) on the Proton X50 head unit running **ATLAS 617 / 618** firmware, from a USB drive.  
+用 Pendrive 在 Proton X50（ATLAS 617 / 618）安装 App 的 Script。
+
+| I want to... / 我想... | Go to / 去这里 |
+|---|---|
+| Install the standard set of apps | [What is this?](#what-is-this) and [Install Apps](#install-apps) |
+| Update or reinstall SmartTube | [SmartTube Update](#-smarttube-update-3256--smarttube-更新-3256) |
+| Update or reinstall NewPipe | [Latest NewPipe APK](#-latest-newpipe-apk--最新-newpipe-apk) |
+| Install my own APKs | [Install Your Own Apps](Install_Your_Own_Apps.md) and the [APK prep tool](tools/README.md) |
+| Make the IHU faster | [Optimization](Optimization.md) |
+| Set up Android Auto / CarPlay | [Recommended Settings](RecommendedSettings.md), [Steering buttons](SteeringButtonWorkaroundAA.md) |
+| Fix "nothing happens" or other problems | [Troubleshooting](Troubleshooting.md) |
+
+**Quick USB checklist / Pendrive 检查：** 32 GB or smaller · FAT32 · script folders in the root of the drive · plug in only after the IHU has fully booted · don't press anything while the script runs.  
+32GB 或以下 · FAT32 · Folder 放在最外层 · IHU 完全启动后才插入 · 运行时什么都不要按。
+
+---
+
+## Notices / 通知
 
 # 📺 SmartTube Update 32.56 / SmartTube 更新 32.56
 
@@ -34,7 +54,7 @@ If V1 cannot remove your current SmartTube version, then use **Uninstall SmartTu
 
 ⬇️ **Download / 下载：**
 
-**[uinstall smartube v2.zip](https://github.com/user-attachments/files/32966950/uinstall.smartube.v2.zip)**
+**[uninstall smarttube v2.zip](https://github.com/user-attachments/files/32966950/uinstall.smartube.v2.zip)**
 
 ---
 
@@ -274,7 +294,7 @@ Use this script to reinstall Autokit only. [Autokit_reinstaller.zip](https://git
 
 (2) With my newborn joining my family, I will be spending less time maintaining this repo. Nevertheless, feel free to submit an Issue, I will review them whenever I can sneak in some time. <br><br>
 
-All past notices have been [archived here](https://github.com/xeon1989/Proton-X50-APK-Installer-ATLAS/blob/main/%5BArchived%5D%20Notice.md). 
+All past notices have been [archived here](%5BArchived%5D%20Notice.md). 
 
 
 ---
@@ -285,7 +305,7 @@ If the script helps you, feel free to support me at Ko-Fi. https://ko-fi.com/xeo
 
 A script installing a set of apps that is currently working only in Proton X50 IHU running on ATLAS version 617 / 618. For GKUI, see [here](https://github.com/xeon1989/Proton-X50-APK-Installer-GKUI).
 
-To customize your own set of apps, [see here.](https://github.com/xeon1989/Proton-X50-APK-Installer-ATLAS/blob/main/Install_Your_Own_Apps.md)
+To customize your own set of apps, [see here.](Install_Your_Own_Apps.md)
 
 To log in to YouTube with your Google account and set up SmartTube for the X50, [see here.](SmartTube_Setup.md)
 
@@ -338,6 +358,9 @@ https://drive.google.com/file/d/1-Bm6H5dBCYvpLrAVeWJcQXEXnoMQVE1U/view?usp=share
 5.	Eject USB from PC, plug it in IHU’s USB port. 
 6.	When the script starts executing, IHU shows “Wireless Charging” screen. Wait patiently for around 1 min. 
 7.	Once script has ended, IHU shows Settings app. Apps are now uninstalled.
+
+## Something not working?
+See [Troubleshooting](Troubleshooting.md) for the most common problems and fixes.
 
 ## Known Issue
 1. Steering wheel buttons are not working. See [this docs](SteeringButtonWorkaroundAA.md) for the workaround, or use AA/CP with Carlinkit. 
