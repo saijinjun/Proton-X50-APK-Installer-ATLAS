@@ -64,18 +64,25 @@ STEP 1  {s1}
 
 STEP 2  {s2}
         ONLY if SmartTube is still there after step 1.
+        NEVER run it after step 4: it removes the new SmartTube too.
         只有在步骤 1 后 SmartTube 还在才做。
+        步骤 4 之后绝对不要再跑，会把新的 SmartTube 也删掉。
 
 STEP 3  {s3}
-        ONLY if an old NewPipe icon is still there. This removes apps that were
-        installed with the Custom App Script.
-        只有在旧 NewPipe 还在才做（删除用 Custom App Script 装的 App）。
+        ONLY if an old NewPipe icon is still there. This removes EVERY app that
+        was installed with the Custom App Script (all hutroops.* apps), not just
+        NewPipe. It also re-enables OTA updates.
+        只有在旧 NewPipe 还在才做。会删除所有用 Custom App Script 装的 App
+        （不只 NewPipe），也会重新开启 OTA 更新。
 
 STEP 4  {s4}
         Installs SmartTube and NewPipe. The IHU may restart 2-3 times and
         "optimizing apps" can take 15-20 minutes. Do not turn the car off.
+        It also DISABLES Proton OTA updates (com.malaysia.ota) and the car
+        assistant app; step 3 turns them back on.
         安装 SmartTube 和 NewPipe。IHU 可能 Restart 2-3 次，优化 App 可能要
-        15-20 分钟，不要熄火。
+        15-20 分钟，不要熄火。也会关闭 Proton OTA 更新和 car assistant，
+        步骤 3 可以重新开启。
 
 AFTER: Hidden Settings > Sounds & Notification > App Notification >
        SmartTube / NewPipe > BLOCK.
