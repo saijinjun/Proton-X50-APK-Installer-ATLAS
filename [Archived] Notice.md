@@ -18,7 +18,7 @@ Youtube seems having issue, so I replaced it with NewPipe.
 
 Additionally added Youtube Vanced Music, feel free to feedback in case of issues. 
 
-Added [Optimization](https://github.com/xeon1989/Proton-X50-APK-Installer-ATLAS/blob/main/Optimization.md). 
+Added [Optimization](Optimization.md). 
 <br><br>
 
 **6-Mar-2023:**

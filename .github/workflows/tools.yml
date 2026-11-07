@@ -1,0 +1,26 @@
+name: Helper tool tests
+
+on:
+  push:
+    paths: ["tools/**", ".github/workflows/tools.yml"]
+  pull_request:
+    paths: ["tools/**", ".github/workflows/tools.yml"]
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ["3.9", "3.13"]
+        exclude:
+          - os: macos-latest
+            python: "3.9"
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest discover -v tools
+      - run: python tools/x50_apk_prep.py --help
